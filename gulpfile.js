@@ -44,11 +44,16 @@ gulp.task('to-php', function() {
     .pipe(gulp.dest('./'));
 });
 
+gulp.task('build', [
+  'scripts',
+  'styles',
+  'templates'
+]);
+
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('./js/*.js', ['scripts']);
   gulp.watch('./scss/*.scss', ['styles']);
   gulp.watch('./scss/components/*.scss', ['styles']);
   gulp.watch('./templates/*.jade', ['templates']);
-  // gulp.watch('./index.html', ['to-php']);
 });
