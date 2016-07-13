@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>eloquii</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="css/fontawesome-stars.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js" integrity="sha256-55Jz3pBCF8z9jBO1qQ7cIf0L+neuPTD1u7Ytzrp2dqo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.0/jquery.barrating.min.js"></script>
+    <script src="script/main.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <header class="header">
+          <div class="header-top">
+            <div class="header-top-links left">
+              <div class="link-wrap white"><a href="http://google.com">the limited</a></div>
+              <div class="link-wrap blue"><a href="http://google.com"></a></div>
+            </div>
+            <div class="header-top-menu right">
+              <ul class="header-top-menu-left left">
+                <li><a href="http://google.com" class="underline-on-hover">Sign In</a></li>
+                <li><a href="http://google.com" class="underline-on-hover">E-mail Sign Up</a></li>
+                <li><a href="http://google.com" class="underline-on-hover">Help</a></li>
+              </ul>
+              <div class="shopping-cart right">
+                <div class="left">
+                  <div class="shopping-cart-items"><span class="quantity">2 items</span><span class="price">$101.00</span>
+                    <div class="name">shopping bag</div>
+                  </div>
+                </div>
+                <div class="right">
+                  <button>view bag<i class="fa fa-angle-down"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-main"><a href="http://google.com" class="logo"><img src="images/logo.png" alt="logo"/></a>
+            <div class="search-block right hidden visible-sm">
+              <form class="search-form">
+                <input type="text" placeholder="Search"/>
+                <button type="submit" value=""><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+        </header>
+        <div class="content">
+          <div id="tabs">
+            <div class="content-nav">
+              <ul class="left">
+                <li><a href="#tab-1">new arrivals</a></li>
+                <li class="ui-tabs-active ui-state-active"><a href="#tab-2">shop the collection</a></li>
+                <li><a href="#tab-3">get the look</a></li>
+                <li><a href="#tab-4">boutiques</a></li>
+                <li><a href="#tab-5">eloquii story</a></li>
+                <li><a href="#tab-6">shape my style</a></li>
+                <li><a href="#tab-7">sale</a></li>
+              </ul>
+              <div class="search-block right visible hidden-sm">
+                <form class="search-form">
+                  <input type="text" placeholder="Search"/>
+                  <button type="submit" value=""><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+            </div>
+            <div class="content-info">
+              <div id="tab-1">tab 1</div>
+              <div id="tab-2">
+                <ul class="breadcrumbs clearfix">
+                  <li><a href="http://google.com" class="underline-on-hover"><i class="fa fa-home"></i></a></li>
+                  <li><i class="fa fa-chevron-right"></i><a href="http://google.com" class="underline-on-hover">Shop the collection</a></li>
+                  <li><i class="fa fa-chevron-right"></i><a href="http://google.com" class="underline-on-hover">Tops & Shorts</a></li>
+                  <li><i class="fa fa-chevron-right"></i><a href="http://google.com" class="underline-on-hover">Tops & Blouses</a></li>
+                  <li><i class="fa fa-chevron-right"></i><a href="http://google.com" class="underline-on-hover active"> Lorem ipsum dolor</a></li>
+                </ul>
+                <div class="product-info clearfix">
+                  <div class="product-info-left left">
+                    <div class="product-gallery">
+                      <div class="img-large"><img id="largeImg" src="images/product_slide_large.jpg" alt="slide_large"/></div>
+                      <div id="thumbs"><a href="images/product_slide_small.jpg"><img src="images/product_slide_small.jpg" alt="thumb1"/></a><a href="images/product_slide_small_3.jpg"><img src="images/product_slide_small_3.jpg" alt="thumb2"/></a><a href="images/product_slide_small_2.jpg"><img src="images/product_slide_small_2.jpg" alt="thumb3"/></a><a href="images/product_slide_small_3.jpg"><img src="images/product_slide_small_3.jpg" alt="thumb4"/></a></div>
+                    </div>
+                    <div class="block-commercial clearfix"><img src="images/commercial.jpg" alt="commercial" class="left"/>
+                      <div class="com-info">
+                        <div class="name">Handbags</div><a href="http://google.com" class="underline-on-hover com-link">Story surrounding<br/>summer bags<i class="fa fa-angle-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-info-right right">
+                    <div class="main-info left">
+                      <div class="main-info-name">
+                        <div class="prod-name">
+                          <div class="name">Product Name</div>
+                          <div class="prices">
+                            <div class="now price">Now $55.90</div>
+                            <div class="was price">Was $79.90</div>
+                          </div>
+                        </div>
+                        <div class="prod-reviews">
+                          <div class="prod-rating">
+                            <div class="star-rating">
+                              <select>
+                                <option label="1" value="1"></option>
+                                <option label="2" value="2"></option>
+                                <option label="3" value="3"></option>
+                                <option label="4" value="4"></option>
+                                <option label="5" value="5"></option>
+                              </select>
+                            </div>
+                            <div class="prod-review"><a href="http://google.com" class="no-underline-on-hover">Read reviews (4)</a>
+                              <div class="item-num">Item #1234567</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="main-product-content">
+                        <div class="main-info-options clearfix">
+                          <div class="options left">
+                            <div class="option-item">
+                              <div class="option-item-name">color</div>
+                              <div id="color" class="option-item-color">
+                                <input id="color-black" type="checkbox"/>
+                                <label for="color-black" class="color-black"></label>
+                                <input id="color-white" type="checkbox"/>
+                                <label for="color-white" class="color-white color-light"></label>
+                                <input id="color-grey" type="checkbox"/>
+                                <label for="color-grey" class="color-grey"></label>
+                                <input id="color-purple" type="checkbox"/>
+                                <label for="color-purple" class="color-purple"></label>
+                                <input id="color-dark-blue" type="checkbox"/>
+                                <label for="color-dark-blue" class="color-dark-blue"></label>
+                                <input id="color-blue" type="checkbox"/>
+                                <label for="color-blue" class="color-blue"></label>
+                              </div>
+                            </div>
+                            <div class="option-item">
+                              <div class="option-item-name">quantity</div>
+                              <input type="text" placeholder="1" class="option-item-quantity"/>
+                            </div>
+                          </div>
+                          <div class="options right">
+                            <div class="option-item">
+                              <div class="option-item-name">size</div>
+                              <div class="option-item-wrap">
+                                <div id="size" class="option-item-size">
+                                  <input id="size-14" type="checkbox"/>
+                                  <label for="size-14">14</label>
+                                  <input id="size-16" type="checkbox"/>
+                                  <label for="size-16">16</label>
+                                  <input id="size-18" type="checkbox"/>
+                                  <label for="size-18">18</label>
+                                  <input id="size-20" type="checkbox" disabled="disabled"/>
+                                  <label for="size-20">20</label>
+                                  <input id="size-22" type="checkbox"/>
+                                  <label for="size-22">22</label>
+                                  <input id="size-24" type="checkbox"/>
+                                  <label for="size-24">24</label>
+                                </div>
+                                <div class="option-item-ref"><a href="http://google.com" class="no-underline-on-hover">What size am I?</a></div>
+                              </div>
+                            </div>
+                            <div class="option-item">
+                              <button class="add-btn">add to bag<i class="fa fa-angle-right"></i></button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="shipping-info"><a href="http://google.com" class="title">free shipping and returns</a></div>
+                        <div class="product-common-info">
+                          <div id="tabs-prod">
+                            <ul class="clearfix">
+                              <li><a href="#tabs-1" class="title">fashion</a></li>
+                              <li><a href="#tabs-2" class="title">fit</a></li>
+                              <li><a href="#tabs-3" class="title">fabric</a></li>
+                            </ul>
+                            <div id="tabs-1">
+                              <div class="tab-content">
+                                <div class="shape"><span class="square"></span><span>Shape 1</span></div>
+                                <p>Model is wearing: 34.5"/87.6 cm regular</p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus incidunt sequi ullam eum ipsa delectus ad, ipsum aspernatur, cumque molestiae vel, fugiat excepturi corporis cum</p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                              </div>
+                            </div>
+                            <div id="tabs-2">
+                              <div class="tab-content">tabs-2</div>
+                            </div>
+                            <div id="tabs-3">
+                              <div class="tab-content">tabs-3</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="share-info">
+                          <div class="col"><a href="http://google.com" class="underline-on-hover"><i class="fa fa-heart"></i>Add to wishlist</a></div>
+                          <div class="col"><a href="http://google.com" class="underline-on-hover"><i class="fa fa-envelope"></i>Send to a friend</a></div>
+                          <div class="col"><a href="http://google.com" class="underline-on-hover"><i class="fa fa-print"></i>Print</a></div>
+                          <div class="col"><a href="http://google.com" class="underline-on-hover"><i class="fa fa-thumbs-up"></i>Like</a></div>
+                          <div class="col"><a href="http://google.com" class="underline-on-hover"><i class="fa fa-plus"></i>Share this</a></div>
+                        </div>
+                      </div>
+                      <div class="block-reviews">
+                        <div class="block-reviews-head clearfix">
+                          <div class="block-reviews-title left">Customer reviews</div><a href="http://google.com" class="block-reviews-link no-underline-on-hover right">Wrire a review</a>
+                        </div>
+                        <div class="block-reviews-items">
+                          <div class="review-item">
+                            <div class="review-item-theme">Subject Line Of The Review</div>
+                            <div class="review-item-author clearfix">
+                              <div class="post-info">Posted by</div>
+                              <div class="post-info author">Hollski</div>
+                              <div class="post-info date">29 April,2011</div>
+                            </div>
+                            <div class="review-item-rate">
+                              <div class="star-rating">
+                                <select>
+                                  <option value="1" label="1"></option>
+                                  <option value="2" label="2"></option>
+                                  <option value="3" label="3"></option>
+                                  <option value="4" label="4"></option>
+                                  <option value="5" label="5"></option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="review-item-body">
+                              <div class="review"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div><a href="http://google.com" class="link-more no-underline-on-hover">Reed More<i class="fa fa-caret-right"></i></a>
+                            </div>
+                          </div>
+                          <div class="review-item">
+                            <div class="review-item-theme">Subject Line Of The Review</div>
+                            <div class="review-item-author clearfix">
+                              <div class="post-info">Posted by</div>
+                              <div class="post-info author">Hollski</div>
+                              <div class="post-info date">29 April,2011</div>
+                            </div>
+                            <div class="review-item-rate">
+                              <div class="star-rating">
+                                <select>
+                                  <option value="1" label="1"></option>
+                                  <option value="2" label="2"></option>
+                                  <option value="3" label="3"></option>
+                                  <option value="4" label="4"></option>
+                                  <option value="5" label="5"></option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="review-item-body">
+                              <div class="review"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div><a href="http://google.com" class="link-more no-underline-on-hover">Reed More<i class="fa fa-caret-right"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recommend-info right">
+                      <div class="recommend-info-name">we also<br/>recommend</div>
+                      <div class="recommend-info-slider"><a href="http://google.com" class="slide-arrow-top"></a>
+                        <div class="slide-items">
+                          <div class="recommend-item"><a href="http://google.com"><img src="images/recommend_item1.jpg" alt="recommend_item1"/></a>
+                            <div class="item-info"><a href="http://google.com">Product Title<br/>goes here
+                                <div class="price">$20.90</div></a></div>
+                          </div>
+                          <div class="recommend-item"><a href="http://google.com"><img src="images/recommend_item2.jpg" alt="recommend_item1"/></a>
+                            <div class="item-info"><a href="http://google.com">Product Title<br/>goes here</a>
+                              <div class="price">$20.90</div>
+                            </div>
+                          </div>
+                          <div class="recommend-item"><a href="http://google.com"><img src="images/recommend_item3.jpg" alt="recommend_item1"/></a>
+                            <div class="item-info"><a href="http://google.com">Product Title<br/>goes here</a>
+                              <div class="price">$20.90</div>
+                            </div>
+                          </div>
+                          <div class="recommend-item"><a href="http://google.com"><img src="images/recommend_item4.jpg" alt="recommend_item1"/></a>
+                            <div class="item-info"><a href="http://google.com">Product Title<br/>goes here</a>
+                              <div class="price">$20.90</div>
+                            </div>
+                          </div>
+                        </div><a href="http://google.com" class="slide-arrow-bottom"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-3">tab 3</div>
+              <div id="tab-4">tab 4</div>
+              <div id="tab-5">tab 5</div>
+              <div id="tab-6">tab 6</div>
+              <div id="tab-7">tab 7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="clearfix">
+            <div class="footer-contacts left">
+              <ul>
+                <li><a href="http://google.com">Order Tracking</a></li>
+                <li><a href="http://google.com">Privacy</a></li>
+                <li><a href="http://google.com">CA Privacy Policy</a></li>
+                <li><a href="http://google.com">Gift Cards</a></li>
+                <li><a href="http://google.com">Virtual Dollars</a></li>
+                <li><a href="http://google.com">T&Cs</a></li>
+                <li><a href="http://google.com">Affiliate Program</a></li>
+                <li><a href="http://google.com">Our Company</a></li>
+                <li><a href="http://google.com">Press</a></li>
+                <li><a href="http://google.com">Size Cart</a></li>
+                <li><a href="http://google.com">Shape My Style</a></li>
+                <li><a href="http://google.com">Site Map</a></li>
+                <li><a href="http://google.com">Customer Services</a><span class="number">1 855 ELO QUII (1 855 356 7844)</span></li>
+              </ul>
+            </div>
+            <div class="footer-social right"><span class="follow">Follow Us:</span><a href="http://google.com" class="fb"></a><a href="http://google.com" class="tw"></a></div>
+          </div>
+          <div class="footer-copyright clearfix">
+            <div class="rights info">&copy; Eloquii by The Limited all rights reserved</div>
+            <div class="made info">Designed by Prod1</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

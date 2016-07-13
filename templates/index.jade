@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+html(lang='en')
+	head
+		meta(charset="UTF-8")
+		title eloquii
+		link(href="css/font-awesome.min.css" rel='stylesheet')
+		link(href="css/fontawesome-stars.css" rel='stylesheet')
+		link(href="style.css" rel='stylesheet')
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+		script(src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js" integrity="sha256-55Jz3pBCF8z9jBO1qQ7cIf0L+neuPTD1u7Ytzrp2dqo=" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.0/jquery.barrating.min.js")
+		script(src="script/main.js" type="text/javascript")
+	body
+		#wrapper
+			.container
+				header.header
+					.header-top
+						.header-top-links.left
+							.link-wrap.white
+								a(href="http://google.com") the limited
+							.link-wrap.blue
+								a(href="http://google.com")
+						.header-top-menu.right
+							ul.header-top-menu-left.left
+								li
+									a.underline-on-hover(href="http://google.com") Sign In
+								li
+									a.underline-on-hover(href="http://google.com") E-mail Sign Up
+								li
+									a.underline-on-hover(href="http://google.com") Help
+							.shopping-cart.right
+								.left
+									.shopping-cart-items
+										span.quantity 2 items
+										span.price $101.00
+										.name shopping bag
+								.right
+									button view bag
+										i.fa.fa-angle-down
+					.header-main
+						a.logo(href="http://google.com")
+							img(src="images/logo.png", alt="logo")
+						.search-block.right.hidden.visible-sm
+								form.search-form
+									input(type="text", placeholder="Search")
+									button(type="submit" value="")
+										i.fa.fa-search
+				.content
+					#tabs
+						.content-nav
+							ul.left
+								li
+									a(href="#tab-1") new arrivals
+								li.ui-tabs-active.ui-state-active
+									a(href="#tab-2") shop the collection
+								li
+									a(href="#tab-3") get the look
+								li
+									a(href="#tab-4") boutiques
+								li
+									a(href="#tab-5") eloquii story
+								li
+									a(href="#tab-6") shape my style
+								li
+									a(href="#tab-7") sale
+							.search-block.right.visible.hidden-sm
+								form.search-form
+									input(type="text", placeholder="Search")
+									button(type="submit" value="")
+										i.fa.fa-search
+						.content-info
+							#tab-1 tab 1
+							#tab-2
+								ul.breadcrumbs.clearfix
+									li
+										a.underline-on-hover(href="http://google.com")
+											i.fa.fa-home
+									li
+										i.fa.fa-chevron-right
+										a.underline-on-hover(href="http://google.com") Shop the collection
+									li
+										i.fa.fa-chevron-right
+										a.underline-on-hover(href="http://google.com") Tops & Shorts
+									li
+										i.fa.fa-chevron-right
+										a.underline-on-hover(href="http://google.com") Tops & Blouses
+									li
+										i.fa.fa-chevron-right
+										a.underline-on-hover.active(href="http://google.com")  Lorem ipsum dolor
+								.product-info.clearfix
+									.product-info-left.left
+										.product-gallery
+											.img-large
+												img#largeImg(src="images/product_slide_large.jpg", alt="slide_large")
+											#thumbs
+												a(href="images/product_slide_small.jpg")
+													img(src="images/product_slide_small.jpg", alt="thumb1")
+												a(href="images/product_slide_small_3.jpg")
+													img(src="images/product_slide_small_3.jpg", alt="thumb2")
+												a(href="images/product_slide_small_2.jpg")
+													img(src="images/product_slide_small_2.jpg", alt="thumb3")
+												a(href="images/product_slide_small_3.jpg")
+													img(src="images/product_slide_small_3.jpg", alt="thumb4")
+										.block-commercial.clearfix
+											img.left(src="images/commercial.jpg", alt="commercial")
+											.com-info
+												.name Handbags
+												a.underline-on-hover.com-link(href="http://google.com")
+													|Story surrounding
+													br
+													|summer bags
+													i.fa.fa-angle-right
+									.product-info-right.right
+										.main-info.left
+											.main-info-name
+												.prod-name
+													.name Product Name
+													.prices
+														.now.price Now $55.90
+														.was.price Was $79.90
+												.prod-reviews
+													.prod-rating
+														.star-rating
+															select
+																option(label="1" value="1")
+																option(label="2" value="2")
+																option(label="3" value="3")
+																option(label="4" value="4")
+																option(label="5" value="5")
+														.prod-review
+															a.no-underline-on-hover(href="http://google.com") Read reviews (4)
+															.item-num Item #1234567
+											.main-product-content
+												.main-info-options.clearfix
+													.options.left
+														.option-item
+															.option-item-name color
+															.option-item-color#color
+																input#color-black(type="checkbox")
+																label.color-black(for="color-black")
+																input#color-white(type="checkbox")
+																label.color-white.color-light(for="color-white")
+																input#color-grey(type="checkbox")
+																label.color-grey(for="color-grey")
+																input#color-purple(type="checkbox")
+																label.color-purple(for="color-purple")
+																input#color-dark-blue(type="checkbox")
+																label.color-dark-blue(for="color-dark-blue")
+																input#color-blue(type="checkbox")
+																label.color-blue(for="color-blue")
+														.option-item
+															.option-item-name quantity
+															input.option-item-quantity(type="text" placeholder="1")
+													.options.right
+														.option-item
+															.option-item-name size
+															.option-item-wrap
+																.option-item-size#size
+																	input#size-14(type="checkbox")
+																	label(for="size-14") 14
+																	input#size-16(type="checkbox")
+																	label(for="size-16") 16
+																	input#size-18(type="checkbox")
+																	label(for="size-18") 18
+																	input#size-20(type="checkbox" disabled="disabled")
+																	label(for="size-20") 20
+																	input#size-22(type="checkbox")
+																	label(for="size-22") 22
+																	input#size-24(type="checkbox")
+																	label(for="size-24") 24
+																.option-item-ref
+																	a.no-underline-on-hover(href="http://google.com") What size am I?
+														.option-item
+															button.add-btn add to bag
+																i.fa.fa-angle-right
+												.shipping-info
+													a.title(href="http://google.com") free shipping and returns
+												.product-common-info
+													#tabs-prod
+														ul.clearfix
+															li
+																a.title(href="#tabs-1") fashion
+															li
+																a.title(href="#tabs-2") fit
+															li
+																a.title(href="#tabs-3") fabric
+														#tabs-1
+															.tab-content
+																.shape
+																	span.square
+																	span Shape 1
+																p Model is wearing: 34.5"/87.6 cm regular
+																p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus incidunt sequi ullam eum ipsa delectus ad, ipsum aspernatur, cumque molestiae vel, fugiat excepturi corporis cum
+																p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+														#tabs-2
+															.tab-content tabs-2
+														#tabs-3
+															.tab-content tabs-3
+												.share-info
+														.col
+															a.underline-on-hover(href="http://google.com")
+																i.fa.fa-heart
+																| Add to wishlist
+														.col
+															a.underline-on-hover(href="http://google.com")
+																i.fa.fa-envelope
+																| Send to a friend
+														.col
+															a.underline-on-hover(href="http://google.com")
+																i.fa.fa-print
+																| Print
+														.col
+															a.underline-on-hover(href="http://google.com")
+																i.fa.fa-thumbs-up
+																| Like
+														.col
+															a.underline-on-hover(href="http://google.com")
+																i.fa.fa-plus
+																| Share this
+											.block-reviews
+												.block-reviews-head.clearfix
+													.block-reviews-title.left Customer reviews
+													a.block-reviews-link.no-underline-on-hover.right(href="http://google.com") Wrire a review
+												.block-reviews-items
+													.review-item
+														.review-item-theme Subject Line Of The Review
+														.review-item-author.clearfix
+															.post-info Posted by
+															.post-info.author Hollski
+															.post-info.date 29 April,2011
+														.review-item-rate
+															.star-rating
+																select
+																	option(value="1" label="1")
+																	option(value="2" label="2")
+																	option(value="3" label="3")
+																	option(value="4" label="4")
+																	option(value="5" label="5")
+														.review-item-body
+															.review  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+															a.link-more.no-underline-on-hover(href="http://google.com") Reed More
+																i.fa.fa-caret-right
+													.review-item
+														.review-item-theme Subject Line Of The Review
+														.review-item-author.clearfix
+															.post-info Posted by
+															.post-info.author Hollski
+															.post-info.date 29 April,2011
+														.review-item-rate
+															.star-rating
+																select
+																	option(value="1" label="1")
+																	option(value="2" label="2")
+																	option(value="3" label="3")
+																	option(value="4" label="4")
+																	option(value="5" label="5")
+														.review-item-body
+															.review  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+															a.link-more(href="http://google.com").no-underline-on-hover Reed More
+																i.fa.fa-caret-right
+										.recommend-info.right
+											.recommend-info-name
+												|we also
+												br
+												|recommend
+											.recommend-info-slider
+												a(href="http://google.com").slide-arrow-top
+												.slide-items
+													.recommend-item
+														a(href="http://google.com")
+															img(src="images/recommend_item1.jpg", alt="recommend_item1")
+														.item-info
+															a(href="http://google.com")
+																|Product Title
+																br
+																|goes here
+																.price $20.90
+													.recommend-item
+														a(href="http://google.com")
+															img(src="images/recommend_item2.jpg", alt="recommend_item1")
+														.item-info
+															a(href="http://google.com")
+																|Product Title
+																br
+																|goes here
+															.price $20.90
+													.recommend-item
+														a(href="http://google.com")
+															img(src="images/recommend_item3.jpg", alt="recommend_item1")
+														.item-info
+															a(href="http://google.com")
+																|Product Title
+																br
+																|goes here
+															.price $20.90
+													.recommend-item
+														a(href="http://google.com")
+															img(src="images/recommend_item4.jpg", alt="recommend_item1")
+														.item-info
+															a(href="http://google.com")
+																|Product Title
+																br
+																|goes here
+															.price $20.90
+												a(href="http://google.com").slide-arrow-bottom
+							#tab-3 tab 3
+							#tab-4 tab 4
+							#tab-5 tab 5
+							#tab-6 tab 6
+							#tab-7 tab 7
+			footer.footer
+				.container
+					.clearfix
+						.footer-contacts.left
+							ul
+								li
+									a(href="http://google.com") Order Tracking
+								li
+									a(href="http://google.com") Privacy
+								li
+									a(href="http://google.com") CA Privacy Policy
+								li
+									a(href="http://google.com") Gift Cards
+								li
+									a(href="http://google.com") Virtual Dollars
+								li
+									a(href="http://google.com") T&Cs
+								li
+									a(href="http://google.com") Affiliate Program
+								li
+									a(href="http://google.com") Our Company
+								li
+									a(href="http://google.com") Press
+								li
+									a(href="http://google.com") Size Cart
+								li
+									a(href="http://google.com") Shape My Style
+								li
+									a(href="http://google.com") Site Map
+								li
+									a(href="http://google.com") Customer Services
+									span.number 1 855 ELO QUII (1 855 356 7844)
+						.footer-social.right
+							span.follow Follow Us:
+							a.fb(href="http://google.com")
+							a.tw(href="http://google.com")
+					.footer-copyright.clearfix
+						.rights.info &copy; Eloquii by The Limited all rights reserved
+						.made.info Designed by Prod1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

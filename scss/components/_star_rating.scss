@@ -1,0 +1,22 @@
+.br-theme-fontawesome-stars {
+	.br-widget {
+		height: 17px;
+		a {
+			font: normal normal normal 12px/1 FontAwesome;
+			margin-right: 3px;
+			&.br-selected {
+				&:after {
+					color: #0d264f;
+				}
+			}
+			&.br-active {
+				&:after {
+					color: #0d264f;
+				}
+			}
+			&:after {
+				// color: #0d264f;
+			}
+		}
+	}
+}

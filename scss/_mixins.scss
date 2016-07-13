@@ -1,0 +1,116 @@
+@mixin media-sprite($sprite) {
+	@include get-sprite($images-sprites, $sprite);
+}
+
+@mixin font($size, $weight, $color: #000) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+}
+
+@mixin clearfix-table {
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+}
+
+@mixin font-velino {
+	font-family: 'velino_sans_medium';
+}
+
+@mixin font-velino-light {
+	font-family: 'velino_sans_light';
+}
+
+@mixin font-velino-thin {
+	font-family: 'velino_sans_thin';
+}
+
+@mixin font-helvetica {
+	font-family: 'helveticaneuecyrmedium';
+}
+
+@mixin img($image) {
+	@include images-sprite($image);
+	width: images-sprite-width($image);
+ 	height: images-sprite-height($image);
+}
+
+@mixin border-gradient($top-color, $bottom-color) {
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-image:
+      -webkit-gradient(linear, 0 0, 0 100%, from($top-color), to($bottom-color)) 1 100%;
+    -webkit-border-image:
+      -webkit-linear-gradient($top-color, $bottom-color) 1 100%;
+    -moz-border-image:
+      -moz-linear-gradient($top-color, $bottom-color) 1 100%;
+    -o-border-image:
+      -o-linear-gradient($top-color, $bottom-color) 1 100%;
+    border-image:
+      linear-gradient(to bottom, $top-color, $bottom-color) 1 100%;
+}
+
+@mixin btn($f-size) {
+	@include font($f-size, 400, #fff);
+	font-family: 'Blue Highway', sans-serif;
+	display: block;
+	text-transform: uppercase;
+	cursor: pointer;
+	background-color: #a3c936;
+	border: none;
+	text-align: center;
+	padding-right:8px;
+	padding-left: 9px;
+	line-height: 24px;
+	// position: relative;
+	// &:after {
+	// 	@include empty-pseudo;
+	// 	@include img($icon);
+	// 	position: relative;
+	// 	top: $top;
+	// 	// right: 7px;
+	// 	// bottom: 0;
+	// 	display: inline-block;
+	// 	margin-left: $m-left;
+	// }
+	&:focus {
+		outline: none;
+	}
+	&:active {
+		border-style: none;
+	}
+	&:hover {
+		text-decoration: none;
+		opacity: .7;
+	}
+}
+
+@mixin input-icon($icon) {
+	@include background(#fff url(../images/#{$icon}.png) no-repeat 10px 7px);
+}
+
+@mixin empty-pseudo {
+	content: ".";
+	font-size: 0;
+	color: transparent;
+}
+
+@mixin btn-main-full {
+	@include btn;
+	padding-left: 0;
+	padding-right: 0;
+	@include full-width;
+}
+
+@mixin full-width {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+
+
+

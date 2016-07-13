@@ -1,0 +1,699 @@
+@import "compass";
+@import "compass/reset";
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "helpers";
+@import "components/option_item";
+@import "components/star_rating";
+@import "../images/images/*.png";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+	@include font-helvetica;
+	font-size: 16px;
+	color: #3f4249;
+	height: 100%;
+	min-height: 100%;
+}
+
+#wrapper {
+	overflow: hidden;
+  	min-height: 100%;
+  	min-width: 800px;
+  	padding-bottom: 110px;
+  	position: relative;
+  	box-sizing: border-box;
+}
+
+.container {
+	width: 90%;
+	max-width: 1280px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header {
+	background-color: $color-blue-dark;
+	margin-right: -9999px;
+	margin-left: -9999px;
+	padding-right: 9999px;
+	padding-left: 9999px;
+	.header-top {
+		height: 28px;
+		&-links {
+			@include clearfix;
+			.link-wrap {
+				float: left;
+				text-align: center;
+				border-radius: 0 0 5px 5px;
+				margin-right: 1px;
+				a {
+					@include font(12px, 400, #555354);
+					font-family: 'Blue Highway';
+					text-decoration: none;
+					width: 104px;
+					height: 31px;
+					display: block;
+					text-transform: uppercase;
+					letter-spacing: 2px;
+					line-height: 31px;
+				}
+				&.white {
+					@include background-image(linear-gradient(to bottom, #f0f0f0, #d0cccd));
+				}
+				&.blue {
+					@include background-image(linear-gradient(to top, #4979a1 0, #102d57 50%));
+					a {
+						background: url(images/link_icon.png) no-repeat center;
+					}
+				}
+			}
+		}
+		&-menu {
+			&-left {
+				@include clearfix;
+				margin-top: 6px;
+				li {
+					float: left;
+					border-right: 1px solid #fff;
+					padding-right: 15px;
+					padding-left: 12px;
+					&:last-of-type {
+						border: none;
+					}
+					a {
+						@include font(11px, 400, #e9faff);
+					}
+				}
+			}
+			.shopping-cart {
+				background-color: #f2f2f2;
+				border-radius: 0 0 5px 5px;
+				border-width: 0 2px 2px 2px;
+				border-style: solid;
+				border-color: #d2d3d5;
+				padding: 7px 6px 5px 10px;
+				width: 250px;
+				height: 27px;
+				position: relative;
+				&-items {
+					@include font(12px, 400, #072243);
+					position: relative;
+					padding-left: 45px;
+					.quantity {
+						border-right: 1px solid #072243;
+						padding-right: 9px;
+					}
+					.price {
+						padding-left: 6px;
+					}
+					.name {
+						@include font(13px, 400, #666666);
+						font-family: 'Blue Highway';
+						text-transform: uppercase;
+						margin-top: 4px;
+					}
+					&:before {
+						@include empty-pseudo;
+						@include img(bag_icon);
+						position: absolute;
+						top: -2px;
+						left: 0;
+						bottom: 0;
+						display: block;
+					}
+				}
+				button {
+					@include btn(12px);
+					letter-spacing: 1px;
+					.fa {
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+	.header-main {
+		@include background-image(linear-gradient(to bottom, #f4f5f7 55%, #e8e9ed 95%));
+		margin-right: -9999px;
+		margin-left: -9999px;
+		padding-right: 9999px;
+		padding-left: 9999px;
+		padding-top: 16px;
+		padding-bottom: 7px;
+		.logo {
+
+		}
+	}
+}
+.search-block {
+	.search-form {
+		padding-top: 5px;
+		position: relative;
+		input {
+			&:focus {
+				outline: none;
+			}
+			&[type= 'text'] {
+				border: 2px solid #ccccce;
+			    border-radius: 8px;
+			    width: 138px;
+			    height: 22px;
+			    padding-left: 10px;
+			    font-size: 9px;
+			}
+		}
+		button[type= 'submit'] {
+			border: none;
+			background: transparent;
+			position: absolute;
+			top: 10px;
+			right: 6px;
+			cursor: pointer;
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+.content-nav {
+	@include clearfix-table;
+	@include background-image(linear-gradient(to right, #eff0f2 0, #fafafc 50%));
+	margin-right: -9999px;
+	margin-left: -9999px;
+	padding-right: 9999px;
+	padding-left: 9999px;
+	border-top: 1px solid #eceeed;
+	border-bottom: 1px solid #eceeed;
+	ul {
+		line-height: 37px;
+		margin-bottom: -1px;
+		padding-bottom: 1px;
+		overflow: hidden;
+		li {
+			float: left;
+			&.ui-tabs-active,
+			&.ui-state-active {
+				a {
+					box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+					background: $color-white;
+					padding-bottom: 10px;
+					margin-bottom: -10px;
+					color: #a7be63;
+				}
+			}
+			a {
+				@include font(15px, 500, #3a3e49);
+				display: block;
+				padding: 0 15px;
+				font-family: 'Blue Highway';
+				text-transform: uppercase;
+				text-decoration: none;
+				letter-spacing: 0.5px;
+				&:hover {
+					color: #a7be63;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+	}
+}
+.content-info {
+	.breadcrumbs {
+		padding-top: 12px;
+		padding-bottom: 30px;
+		li {
+			float: left;
+			position: relative;
+			padding-left: 8px;
+			.fa.fa-home {
+				font-size: 13px;
+			}
+			.fa.fa-chevron-right {
+				color: #dee2e5;
+				font-size: 9px;
+				margin-right: 8px;
+			}
+			&:first-of-type {
+				padding-left: 0;
+				&:before {
+					content: none;
+				}
+			}
+			a {
+				@include font(10px, 400, #a0a0a0);
+				&.active {
+					color: #4d5f75;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	.product-info {
+		.product-gallery {
+			.img-large {
+				margin-bottom: 10px;
+				border: 2px solid #f3f3f3;
+				img {
+					width: 100%;
+					display: block;
+				}
+			}
+			#thumbs {
+				a {
+					margin-right: 10px;
+				}
+			}
+		}
+		.block-commercial {
+			margin-top: 25px;
+			margin-bottom: 20px;
+			.com-info {
+				margin-top: 100px;
+				.name {
+					@include font(27px, 100, #9b9c9e);
+					@include font-velino-thin;
+					text-transform: uppercase;
+					margin-bottom: 5px;
+				}
+				.com-link {
+					@include font (14px, 400, #313236);
+					font-family: 'Blue Highway';
+					cursor: pointer;
+					display: block;
+					line-height: 15px;
+					.fa {
+						margin-left: 10px;
+						color: $color-black;
+					}
+				}
+			}
+		}
+	}
+	.product-info-left {
+		width: (390px / 950px * 100%);
+	}
+	.product-info-right {
+		width: (520px / 950px * 100%);
+		.main-product-content {
+			box-shadow:
+				0px 9px 6px -10px #CCC,
+        		0px -9px 6px -10px #CCC;
+		}
+		.main-info {
+			width: (360px / 510px) * 100%;
+			&-name {
+				@include clearfix;
+				margin-bottom: 16px;
+				.prod-name {
+					float: left;
+					.name {
+						@include font(20px, 400, $title-color-dark-blue);
+						@include font-velino;
+						margin-bottom: 6px;
+					}
+					.prices {
+						@include clearfix;
+					}
+					.price {
+						@include font(14px, 400, #ab6977);
+						float: left;
+					}
+					.was {
+						color: #787878;
+						font-size: 12px;
+						text-decoration: line-through;
+						margin-left: 10px;
+					}
+				}
+			}
+			.prod-reviews {
+				float: right;
+				.prod-rating {
+					@include clearfix;
+					.star-rating {
+						float: left;
+					}
+				}
+				.prod-review {
+					float: right;
+					margin-left: 3px;
+					a {
+						@include font(12px, 400, $link-color-deep-blue);
+						&.quantity {
+							margin-left: 7px;
+						}
+					}
+					.item-num {
+						@include font(11px, 400, #a6a6a6);
+						margin-top: 14px;
+						text-align: right;
+					}
+				}
+			}
+			&-options {
+				padding: 13px 0 20px;
+				.options.left {
+					width: 46%;
+				}
+				.options.right {
+					width: 54%;
+				}
+				.option-item {
+					&-name {
+						@include font(14px, 400, #393b48);
+						font-family: 'Blue Highway';
+						margin-bottom: 9px;
+					}
+					&-color {
+						width: 120px;
+						margin-bottom: 18px;
+					}
+
+					&-quantity {
+						width: 20px;
+						height: 22px;
+						padding-left: 9px;
+						border: 1px solid #c5c5c5;
+						background-color: #f2f2f2;
+					}
+					&-wrap {
+						@include clearfix;
+					}
+					&-size {
+						width: 90px;
+						margin-bottom: 40px;
+						float: left;
+						span {
+							@include font(12px, 400, #292d30);
+							background-color: #d6dbde;
+							line-height: 25px;
+							text-align: center;
+							margin-bottom: 2px;
+							&.disabled {
+								opacity: 0.5;
+							}
+						}
+					}
+					&-ref {
+						float: left;
+						margin-top: 37px;
+						margin-left: 7px;
+						a {
+							@include font(12px, 400, $link-color-deep-blue);
+						}
+					}
+					.add-btn {
+						@include btn(14px);
+						margin-top: 5px;
+						letter-spacing: 1px;
+						.fa {
+							margin-left: 12px;
+						}
+					}
+				}
+			}
+			.shipping-info {
+				border: 2px dotted $title-color-dark-blue;
+				padding-left: 12px;
+				margin-bottom: 20px;
+			}
+			.title {
+				@include font(14px, 400, $title-color-dark-blue);
+				font-family: 'Blue Highway';
+				text-decoration: none;
+				line-height: 35px;
+			}
+			.product-common-info {
+				ul {
+					margin-bottom: -2px;
+					li {
+						box-sizing: border-box;
+						float: left;
+						width: 33%;
+						margin-right: 0.5%;
+						&:last-of-type {
+							margin-right: 0;
+						}
+						&:focus {
+							outline: none;
+						}
+						a {
+							background-color: #e7e8ec;
+							line-height: 25px;
+							padding-left: 12px;
+							display: block;
+							&:focus {
+								outline: none;
+							}
+						}
+					}
+					.ui-tabs-active,
+					.ui-state-active {
+						border-width: 2px 2px 0 2px;
+						border-style: solid;
+						border-color: #dedde2;
+						a {
+							background-color: #fff;
+						}
+					}
+				}
+				.tab-content {
+					border: 2px solid #dedde2;
+					padding: 10px 20px 20px 12px;
+					.shape {
+						margin-bottom: 18px;
+						.square {
+							background-color: #9a9a9a;
+							width: 20px;
+							height: 20px;
+							display: inline-block;
+							margin-right: 10px;
+						}
+						span {
+							@include font(11px, 400, #646464);
+							line-height: 20px;
+							vertical-align: middle;
+						}
+					}
+					p {
+						@include font(11px, 400, #646464);
+						margin-bottom: 18px;
+						line-height: 12px;
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+			.share-info {
+				@include clearfix;
+				margin-top: 10px;
+				padding-bottom: 13px;
+				.col {
+					float: left;
+					width: (100% / 3);
+					line-height: 20px;
+					a {
+						@include font(11px, 400, $link-color-deep-blue);
+						display: block;
+
+						i {
+							margin-right: 5px;
+							color: #0d264f;
+						}
+					}
+				}
+			}
+			.block-reviews {
+				padding: 20px 0;
+				&-head {
+					border-bottom: 2px dotted #bbbbbb;
+					padding-bottom: 10px;
+				}
+				&-title {
+					@include font(15px, 400, $title-color-dark-blue);
+					@include font-velino;
+				}
+				&-link {
+					@include font(12px, 400, $link-color-deep-blue);
+				}
+				&-items {
+					.review-item {
+						padding: 22px 0 15px;
+						border-bottom: 5px solid #fafafa;
+						&-theme {
+							@include font(12px, 700, $title-color-dark-blue);
+							@include font-velino;
+							margin-bottom: 2px;
+						}
+						&-author {
+							margin-bottom: 3px;
+							.post-info {
+								@include font( 12px, 500, #414141);
+								@include font-velino;
+								float: left;
+								padding-right: 5px;
+								&.author {
+									border-right: 1px solid #414141;
+								}
+								&.date {
+									margin-left: 5px;
+								}
+							}
+						}
+						&-rate {
+							margin-bottom: 3px;
+						}
+						&-body {
+							.review {
+								@include font(12px, 500, #414141);
+								@include font-velino;
+								margin-bottom: 5px;
+								letter-spacing: .5px;
+							}
+							.link-more {
+								@include font(12px, 400, $link-color-deep-blue);
+								.fa {
+									margin-left: 5px;
+									color: #34343c;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.recommend-info {
+			width: (110px / 510px * 100%);
+			padding-bottom: 16px;
+			&-name {
+				@include font(15px, 400, #213153);
+				font-family: 'Blue Highway';
+				text-align: center;
+			}
+			.slide-arrow-top {
+				@include img(recommend_arrow_top);
+				display: block;
+				margin: 3px auto 10px;
+			}
+			.slide-arrow-bottom {
+				@include img(recommend_arrow_bottom);
+				display: block;
+				margin: 11px auto 0;
+			}
+			.slide-items {
+				box-shadow:
+				0px 9px 6px -10px #CCC,
+        		0px -9px 6px -10px #CCC;
+				padding: 5px 0;
+			}
+			.recommend-item {
+				margin-bottom: 10px;
+				&:last-of-type {
+					margin-bottom: 0px;
+				}
+				img {
+					margin: 4px 0;
+					display: block;
+					width: 100%;
+				}
+				.item-info {
+					@include font(10px, 400, #d6d6d6);
+					line-height: 15px;
+					a {
+						text-decoration: none;
+						color: #28344b;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.footer {
+	background-color: #dadee1;
+	// margin-right: -9999px;
+	// margin-left: -9999px;
+	// padding-right: 9999px;
+	// padding-left: 9999px;
+	padding-top: 11px;
+	padding-bottom: 10px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	&-contacts {
+		width: 70%;
+		ul {
+			li {
+				float: left;
+				margin-right: 20px;
+				line-height: 18px;
+				&:last-of-type {
+					a {
+						margin-right: 10px;
+					}
+				}
+				a {
+					@include font(11px, 900, $title-color-dark-blue);
+					@include font-velino;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				.number {
+					@include font(11px, 400, $title-color-dark-blue);
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	&-social {
+		position: relative;
+		.follow {
+			@include font(11px, 500, #3b3f4a);
+			line-height: 22px;
+			margin-right: 10px;
+			float: left;
+		}
+		a {
+			display: inline-block;
+			margin-right: 7px;
+		}
+		@each $i in fb, tw {
+			.#{$i} {
+				@include img(#{$i});
+			}
+		}
+	}
+	&-copyright {
+		margin-top: 15px;
+		.info {
+			@include font(10px, 400, #818284);
+			float: left;
+			padding-right: 10px;
+			&.rights {
+				border-right: 1px solid #818284;
+			}
+			&.made {
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+@import "responsive";

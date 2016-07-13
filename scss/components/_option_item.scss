@@ -1,0 +1,67 @@
+.option-item {
+	.ui-controlgroup {
+		@include clearfix;
+	}
+	label {
+		@include font(12px, 400, #292d30);
+		width: 25px;
+		height: 25px;
+		float: left;
+		margin-right: 4px;
+		margin-bottom: 4px;
+		position: relative;
+		box-sizing: border-box;
+		border: 1px solid transparent;
+		background-color: #d6dbde;
+		text-align: center;
+
+		&.color-light {
+			border-color: #bcbcbc;
+		}
+
+		&.ui {
+			&-state-active {
+				border-color: $color-black;
+
+				&:before {
+					@include empty-pseudo;
+					border: 2px solid $color-white;
+					position: absolute;
+					top: 0;
+					right: 0;
+					left: 0;
+					bottom: 0;
+				}
+
+				&.color-light {
+					&:before {
+						border-color: $color-grey;
+					}
+				}
+			}
+			&-state-disabled {
+				opacity: 0.5;
+			}
+		}
+		&.color {
+			&-black {
+				background-color: $product-color-black;
+			}
+			&-white {
+				background-color: $product-color-white;
+			}
+			&-grey {
+				background-color: $product-color-grey;
+			}
+			&-purple {
+				background-color: $product-color-purple;
+			}
+			&-dark-blue {
+				background-color: $product-color-dark-blue;
+			}
+			&-blue {
+				background-color: $product-color-blue;
+			}
+		}
+	}
+}
